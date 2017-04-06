@@ -1,2 +1,23 @@
-<h1>Cocktails#index</h1>
-<p>Find me in app/views/cocktails/index.html.erb</p>
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.9) 0%, rgba(0,36,61,0.6) 30%), url('https://static.pexels.com/photos/48720/pexels-photo-48720.jpeg');">
+  <div class="banner-content">
+    <h1>FABULOUS COCKTAILS</h1>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="row">
+    <h2 class="text-center">Cocktails List</h2>
+      <div class="col-md-6 col-md-offset-3">
+        <% @cocktails.each do |r| %>
+        <div class="card">
+        <%= link_to cocktail_path(r), method: :delete do %>
+        <i class="fa fa-times" aria-hidden="true"></i>
+        <%end%>
+        <div class="header-card">
+        <h3><%= link_to r.name.upcase, cocktail_path(r) %></h3>
+        <% end %>
+        <%= link_to "Create a cocktail", new_cocktail_path, class: "ui button" %>
+    </div>
+  </div>
+</div>
