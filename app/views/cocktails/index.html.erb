@@ -6,10 +6,20 @@
 
 <% @cocktails.each do |r| %>
 <div class="col-xs-12 col-sm-4">
-  <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('');">
+  <% if r.photo? %>
+<div class="card-header" style="background-image: url('<%= image_path r.photo%>')">
+</div>
+<% else %>
+<div class="card-header" style="background-image: url('http://www.seriouseats.com/images/2014/11/20141104-cocktail-party-old-fashioneds-holiday-vicky-wasik-3.jpg')">
+</div>
+<% end %>
     <div class="card-description">
      <h2><%= link_to r.name.upcase, cocktail_path(r) %></h2>
    </div>
+     
   </div>
 </div>
+
+
+
 <% end %>
