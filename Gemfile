@@ -20,6 +20,7 @@ gem 'jbuilder', '~> 2.5'
 
 # Upload Pictures
 gem 'cloudinary'
+gem 'carrierwave', '~> 0.11.2'
 
 gem 'figaro'
 

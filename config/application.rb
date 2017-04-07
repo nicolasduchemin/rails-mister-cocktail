@@ -21,6 +21,5 @@ module RailsMisterCocktail
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
-    CLOUDINARY_URL: CLOUDINARY_URL=cloudinary://734877842427392:UelP4Ybp8EKIcMcEt0HAF4UD4gM@dupmz9jow
   end
 end
