@@ -6,7 +6,7 @@
         <%= simple_form_for (@cocktail) do |f| %>
         <form class="ui form">
           <%= f.error_notification %>
-          <%= f.input :name %>
+          <%= f.input :name, class: 'field' %>
           <%= f.button :submit %>
         <% end %>
         </form>
