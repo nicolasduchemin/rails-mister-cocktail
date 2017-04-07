@@ -9,6 +9,7 @@
         <%end%>
         <p><%= dose.description %></p>
         <p><%= dose.ingredient.name %></p>
+        <%= cl_image_tag @product.photo, height: 300, width: 400, crop: :fill %>
         </div><br>
       <% end %>
       <%= link_to "Add Dose", new_cocktail_dose_path(@cocktail), class: "ui primary button" %>
